@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<!DOCTYPE bam SYSTEM "bam.dtd">
+<!ELEMENT bam (personne*)>
+
+<!ELEMENT personne (nom, prenom, adresse, telephones, emails)>
+<!ATTLIST personne sexe (masculin | feminin) #REQUIRED>
+<!ELEMENT nom (#PCDATA)>
+<!ELEMENT prenom (#PCDATA)>
+
+<!ELEMENT adresse (numero, ville, pays)>
+<!ELEMENT numero (#PCDATA)>
+
+<!ELEMENT ville (#PCDATA)>
+<!ELEMENT pays (#PCDATA)>
+
+<!ELEMENT telephones (telephone+)>
+<!ELEMENT telephone (#PCDATA)>
+<!ATTLIST telephone type CDATA #REQUIRED>
+
+<!ELEMENT emails (email+)>
+<!ELEMENT email (#PCDATA)>
+<!ATTLIST email type CDATA #REQUIRED>
